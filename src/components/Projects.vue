@@ -84,12 +84,14 @@ function isOdd(index: number): boolean {
             <p class="text-gray-600 mb-4 text-justify m-8">
               {{ project.description }}
             </p>
-            <a
-              :href="project.link"
-              class="inline-block bg-transparent border border-yellow-500 text-yellow-500 font-semibold py-2 px-4 rounded hover:bg-yellow-500 hover:text-white transition-colors duration-300"
-            >
-              View Project
-            </a>
+            <div class="flex justify-center">
+              <a
+                :href="project.link"
+                class="inline-block bg-transparent border border-yellow-500 text-yellow-500 font-semibold py-2 px-4 rounded hover:bg-yellow-500 hover:text-white transition-colors duration-300"
+              >
+                View Project
+              </a>
+            </div>
           </div>
         </div>
       </div>
