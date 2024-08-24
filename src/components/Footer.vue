@@ -1,5 +1,7 @@
 <script setup></script>
 
-<template>Footer</template>
+<template>
+  <div id="footer">Footer</div>
+</template>
 
 <style scoped></style>
