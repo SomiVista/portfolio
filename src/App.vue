@@ -2,6 +2,7 @@
 import Header from "./components/Header.vue";
 import Thumbnail from "./components/Thumbnail.vue";
 import Projects from "./components/Projects.vue";
+import ContactForm from "./components/ContactForm.vue";
 import Footer from "./components/Footer.vue";
 </script>
 
@@ -10,6 +11,7 @@ import Footer from "./components/Footer.vue";
     <Header />
     <Thumbnail />
     <Projects />
+    <ContactForm />
     <Footer />
   </div>
 </template>

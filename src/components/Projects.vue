@@ -10,43 +10,43 @@ interface ProjectType {
 
 const fetchedProjects: ProjectType[] = [
   {
-    thumbnil: "/assets/projects/1.png",
-    title: "Dreamdays.ae",
+    thumbnil: "/assets/projects/Dreamdays.png",
+    title: "Dreamdays",
     description:
       "Dreamdays, since 2005, offers 400+ unique experiences and exceptional service, making it the UAE's fastest-growing gift experience company with 12-month vouchers.",
     link: "https://dreamdays.ae/",
   },
   {
-    thumbnil: "/assets/projects/2.png",
+    thumbnil: "/assets/projects/SNAPDAQ.png",
     title: "SNAPDAQ",
     description:
       "Snapdaq streamlines data acquisition from sensors with customizable configurations and smart triggers. It allows users to view signals on mobile devices and export data to spreadsheets for easy sharing.",
     link: "https://dreamdays.ae/",
   },
   {
-    thumbnil: "/assets/projects/3.png",
+    thumbnil: "/assets/projects/Kubak.png",
     title: "Kubak",
     description:
       "Kubak delivers diverse IT solutions globally, including e-business, enterprise apps, and custom software. They handle everything from design to support, tailored to client needs.",
     link: "https://www.kubak.co/",
   },
   {
-    thumbnil: "/assets/projects/4.png",
+    thumbnil: "/assets/projects/Goranee.png",
     title: "Goranee.ir",
     description:
       "Goranee.ir is an innovative project focused on enhancing user engagement through modern web technologies.",
     link: "https://goranee.ir/",
   },
   {
-    thumbnil: "/assets/projects/5.png",
+    thumbnil: "/assets/projects/Jin724.png",
     title: "jin724com",
     description:
       "Providing affordable, instant, and easy services; promoting the culture of self-care, improving and reforming lifestyle, and protecting the environment in pursuit of comfort and peace for humanity.",
     link: "https://jin724.com/",
   },
   {
-    thumbnil: "/assets/projects/6.png",
-    title: "Kurdcloud.ir",
+    thumbnil: "/assets/projects/Kurdcloud.png",
+    title: "Kurdcloud",
     description:
       "Kurdcloud Computing Development Company, with 8 years of experience, specializes in software development, web design, and cloud services.",
     link: "https://kurdcloud.ir/",
@@ -74,7 +74,7 @@ function isOdd(index: number): boolean {
           <img
             :src="project.thumbnil"
             alt="Project Image 1"
-            class="w-full lg:w-1/2 h-64 object-cover shadow-lg"
+            class="w-full lg:w-1/2 object-cover shadow-lg"
             :class="isOdd(index) ? 'rounded-r-lg lg:order-2' : 'rounded-l-lg'"
           />
           <div class="w-full lg:w-1/2">
@@ -87,6 +87,7 @@ function isOdd(index: number): boolean {
             <div class="flex justify-center">
               <a
                 :href="project.link"
+                target="_blank"
                 class="inline-block bg-transparent border border-yellow-500 text-yellow-500 font-semibold py-2 px-4 rounded hover:bg-yellow-500 hover:text-white transition-colors duration-300"
               >
                 View Project
