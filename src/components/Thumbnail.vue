@@ -36,7 +36,7 @@
         </div>
       </div>
       <div class="relative z-10 custom-style-img">
-        <img src="../assets/profile.png" alt="Profile Image" class="" />
+        <img src="/assets/profile.png" alt="Profile Image" class="" />
       </div>
     </div>
   </section>
