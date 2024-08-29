@@ -11,7 +11,9 @@
       <nav class="flex space-x-8">
         <a href="#about" class="text-gray-600 hover:text-white">About</a>
         <a href="#projects" class="text-gray-600 hover:text-white">Projects</a>
-        <a href="#footer" class="text-gray-600 hover:text-white">Contacts</a>
+        <a href="#contactForm" class="text-gray-600 hover:text-white"
+          >Contact</a
+        >
       </nav>
     </div>
     <div class="absolute custom-style-svg z-0">
