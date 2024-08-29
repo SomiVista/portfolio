@@ -10,42 +10,42 @@ interface ProjectType {
 
 const fetchedProjects: ProjectType[] = [
   {
-    thumbnil: "/assets/projects/Dreamdays.png",
+    thumbnil: import.meta.env.BASE_URL + "assets/projects/Dreamdays.png",
     title: "Dreamdays",
     description:
       "Dreamdays, since 2005, offers 400+ unique experiences and exceptional service, making it the UAE's fastest-growing gift experience company with 12-month vouchers.",
     link: "https://dreamdays.ae/",
   },
   {
-    thumbnil: "/assets/projects/SNAPDAQ.png",
+    thumbnil: import.meta.env.BASE_URL + "assets/projects/SNAPDAQ.png",
     title: "SNAPDAQ",
     description:
       "Snapdaq streamlines data acquisition from sensors with customizable configurations and smart triggers. It allows users to view signals on mobile devices and export data to spreadsheets for easy sharing.",
     link: "https://dreamdays.ae/",
   },
   {
-    thumbnil: "/assets/projects/Kubak.png",
+    thumbnil: import.meta.env.BASE_URL + "assets/projects/Kubak.png",
     title: "Kubak",
     description:
       "Kubak delivers diverse IT solutions globally, including e-business, enterprise apps, and custom software. They handle everything from design to support, tailored to client needs.",
     link: "https://www.kubak.co/",
   },
   {
-    thumbnil: "/assets/projects/Goranee.png",
+    thumbnil: import.meta.env.BASE_URL + "assets/projects/Goranee.png",
     title: "Goranee.ir",
     description:
       "Goranee.ir is an innovative project focused on enhancing user engagement through modern web technologies.",
     link: "https://goranee.ir/",
   },
   {
-    thumbnil: "/assets/projects/Jin724.png",
+    thumbnil: import.meta.env.BASE_URL + "assets/projects/Jin724.png",
     title: "jin724com",
     description:
       "Providing affordable, instant, and easy services; promoting the culture of self-care, improving and reforming lifestyle, and protecting the environment in pursuit of comfort and peace for humanity.",
     link: "https://jin724.com/",
   },
   {
-    thumbnil: "/assets/projects/Kurdcloud.png",
+    thumbnil: import.meta.env.BASE_URL + "assets/projects/Kurdcloud.png",
     title: "Kurdcloud",
     description:
       "Kurdcloud Computing Development Company, with 8 years of experience, specializes in software development, web design, and cloud services.",
