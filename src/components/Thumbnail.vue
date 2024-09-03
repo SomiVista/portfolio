@@ -6,7 +6,11 @@
       class="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center"
     >
       <div class="w-full lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
-        <h1 class="text-yellow-500 text-4xl mb-12">Front End Web Developer</h1>
+        <h1
+          class="lg:text-yellow-500 md:text-white sm:text-white text-4xl mb-12"
+        >
+          Front End Web Developer
+        </h1>
         <h1 class="text-4xl font-bold text-gray-900 mb-8">
           Hey! I’m Somayeh Roohani
         </h1>
@@ -51,9 +55,14 @@
     border-radius: 7rem;
   }
 }
-@media (min-width: 640px) {
+@media (max-width: 768px) {
   .custom-style-img {
     display: none !important;
+  }
+}
+@media (max-width: 1024px) {
+  .custom-style-img {
+    right: -6rem;
   }
 }
 </style>
