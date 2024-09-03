@@ -51,4 +51,9 @@
     border-radius: 7rem;
   }
 }
+@media (min-width: 640px) {
+  .custom-style-img {
+    display: none !important;
+  }
+}
 </style>
