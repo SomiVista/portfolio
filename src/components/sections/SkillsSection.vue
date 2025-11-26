@@ -1,5 +1,5 @@
 <script setup>
-import { skills } from '../data/skills';
+import { skills } from '../../data/skills';
 
 // Flatten top skills for progress bars (just an example selection)
 const topSkills = skills.flatMap(cat => cat.items).filter(item => ['Vue.js', 'React', 'TypeScript', 'Tailwind CSS'].includes(item.name));

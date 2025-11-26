@@ -1,6 +1,6 @@
 <script setup>
 import { reactive } from "vue";
-import { profile } from '../data/profile';
+import { profile } from '../../data/profile';
 
 const form = reactive({
   name: "",

@@ -1,12 +1,12 @@
 <script setup>
-import Header from "./components/Header.vue";
-import HeroSection from "./components/HeroSection.vue";
-import AboutSection from "./components/AboutSection.vue";
-import ProjectsSection from "./components/ProjectsSection.vue";
-import SkillsSection from "./components/SkillsSection.vue";
-import ResumeSection from "./components/ResumeSection.vue";
-import ContactSection from "./components/ContactSection.vue";
-import Footer from "./components/Footer.vue";
+import Header from "./components/layout/Header.vue";
+import HeroSection from "./components/sections/HeroSection.vue";
+import AboutSection from "./components/sections/AboutSection.vue";
+import ProjectsSection from "./components/sections/ProjectsSection.vue";
+import SkillsSection from "./components/sections/SkillsSection.vue";
+import ResumeSection from "./components/sections/ResumeSection.vue";
+import ContactSection from "./components/sections/ContactSection.vue";
+import Footer from "./components/layout/Footer.vue";
 import profileImage from "./assets/profile.jpg";
 </script>
 

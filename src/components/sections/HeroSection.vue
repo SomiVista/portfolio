@@ -1,5 +1,5 @@
 <script setup>
-import { profile } from '../data/profile';
+import { profile } from '../../data/profile';
 </script>
 
 <template>
