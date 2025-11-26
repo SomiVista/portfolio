@@ -212,16 +212,16 @@ onUnmounted(() => {
 
 /* Animation triggers: Initial load and Hover */
 .glitch-title {
-  animation: glitch-skew 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: glitch-skew 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .group:hover .glitch-title {
-  animation: glitch-skew 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  animation: glitch-skew 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
 }
 .group:hover .glitch-title::before {
-  animation: glitch-anim 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  animation: glitch-anim 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
 }
 .group:hover .glitch-title::after {
-  animation: glitch-anim2 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  animation: glitch-anim2 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
 }
 
 /* Keyframes */
@@ -258,12 +258,12 @@ onUnmounted(() => {
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
-  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
 }
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  to { width: 50% }
 }
 
 @keyframes blink-caret {
