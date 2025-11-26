@@ -1,47 +1,22 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+const props = defineProps({
+  activeSection: {
+    type: String,
+    default: 'home'
+  }
+});
+
+const emit = defineEmits(['navigate']);
 
 const sections = ['home', 'about', 'projects', 'skills', 'resume', 'contact'];
-const activeSection = ref('home');
 
-const scrollTo = (id) => {
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
+const handleNavClick = (id) => {
+  emit('navigate', id);
 };
-
-// Intersection Observer to update active link
-let observer = null;
-
-onMounted(() => {
-  const options = {
-    root: null, // viewport
-    rootMargin: '-50% 0px -50% 0px', // trigger when section is in middle of viewport
-    threshold: 0
-  };
-
-  observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        activeSection.value = entry.target.id;
-      }
-    });
-  }, options);
-
-  sections.forEach((id) => {
-    const element = document.getElementById(id);
-    if (element) observer.observe(element);
-  });
-});
-
-onUnmounted(() => {
-  if (observer) observer.disconnect();
-});
 </script>
 
 <template>
-  <header class="sticky top-0 z-50 bg-surface/90 backdrop-blur-sm border-b border-border px-8 md:px-12 py-4 flex justify-between items-center">
+  <header class="sticky top-0 z-50 bg-surface/90 backdrop-blur-sm border-b border-border px-8 md:px-12 py-4 flex justify-between items-center transition-all duration-300">
     <div class="text-xl font-bold text-primary tracking-tighter">
       SOMI<span class="font-normal">VISTA</span>
     </div>
@@ -52,11 +27,15 @@ onUnmounted(() => {
         v-for="section in sections" 
         :key="section"
         :href="`#${section}`"
-        @click.prevent="scrollTo(section)"
-        class="text-sm font-medium uppercase tracking-wider transition-colors duration-300 hover:text-primary"
-        :class="activeSection === section ? 'text-primary' : 'text-secondary'"
+        @click.prevent="handleNavClick(section)"
+        class="text-sm font-medium uppercase tracking-wider transition-all duration-300 relative group"
+        :class="activeSection === section ? 'text-primary' : 'text-secondary hover:text-primary'"
       >
         {{ section }}
+        <span 
+          class="absolute -bottom-1 left-0 w-full h-0.5 bg-primary transform origin-left transition-transform duration-300"
+          :class="activeSection === section ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'"
+        ></span>
       </a>
     </nav>
 

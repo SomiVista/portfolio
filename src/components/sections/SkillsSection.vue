@@ -1,5 +1,10 @@
 <script setup>
+import { ref } from 'vue';
 import { skills } from '../../data/skills';
+import { useScrollReveal } from '../../composables/useScrollReveal';
+
+const sectionRef = ref(null);
+useScrollReveal(sectionRef);
 
 // Flatten top skills for progress bars (just an example selection)
 const topSkills = skills.flatMap(cat => cat.items).filter(item => ['Vue.js', 'React', 'TypeScript', 'Tailwind CSS'].includes(item.name));
@@ -7,7 +12,8 @@ const topSkills = skills.flatMap(cat => cat.items).filter(item => ['Vue.js', 'Re
 
 <template>
   <section id="skills" class="py-20 px-8 md:px-12 border-b border-border">
-    <div class="mb-12">
+    <div ref="sectionRef">
+      <div class="mb-12">
       <h2 class="text-xs font-bold tracking-widest uppercase mb-2 text-secondary">Expertise</h2>
       <h3 class="text-3xl font-bold text-primary">My Skills</h3>
     </div>
@@ -43,6 +49,7 @@ const topSkills = skills.flatMap(cat => cat.items).filter(item => ['Vue.js', 'Re
           </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 </template>

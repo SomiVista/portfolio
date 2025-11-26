@@ -1,9 +1,14 @@
 <script setup>
+import { ref } from 'vue';
+import { useScrollReveal } from '../../composables/useScrollReveal';
+
+const sectionRef = ref(null);
+useScrollReveal(sectionRef);
 </script>
 
 <template>
   <section id="resume" class="py-20 px-8 md:px-12 border-b border-border bg-background">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+    <div ref="sectionRef" class="flex flex-col md:flex-row items-center justify-between gap-8">
       <div class="md:w-2/3">
         <h2 class="text-xs font-bold tracking-widest uppercase mb-2 text-secondary">Resume</h2>
         <h3 class="text-3xl font-bold text-primary mb-4">Check My Resume</h3>

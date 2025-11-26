@@ -1,6 +1,10 @@
 <script setup>
-import { reactive } from "vue";
+import { reactive, ref } from "vue";
 import { profile } from '../../data/profile';
+import { useScrollReveal } from '../../composables/useScrollReveal';
+
+const sectionRef = ref(null);
+useScrollReveal(sectionRef);
 
 const form = reactive({
   name: "",
@@ -24,10 +28,11 @@ const submitForm = () => {
 
 <template>
   <section id="contact" class="py-20 px-8 md:px-12 border-b border-border">
-    <div class="mb-12">
-      <h2 class="text-xs font-bold tracking-widest uppercase mb-2 text-secondary">Contact</h2>
-      <h3 class="text-3xl font-bold text-primary">Get in Touch</h3>
-    </div>
+    <div ref="sectionRef">
+      <div class="mb-12">
+        <h2 class="text-xs font-bold tracking-widest uppercase mb-2 text-secondary">Contact</h2>
+        <h3 class="text-3xl font-bold text-primary">Get in Touch</h3>
+      </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
       <!-- Contact Form -->
@@ -97,12 +102,10 @@ const submitForm = () => {
             <a :href="profile.social.github" target="_blank" rel="noopener noreferrer" class="text-secondary hover:text-primary transition-colors">
               GitHub
             </a>
-            <a :href="profile.social.twitter" target="_blank" rel="noopener noreferrer" class="text-secondary hover:text-primary transition-colors">
-              Twitter
-            </a>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 </template>
